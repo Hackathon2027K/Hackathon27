@@ -11,18 +11,18 @@ module.exports = {
       colors: {
         brand: {
           grey: {
-            50: '#f8fafc',
-            100: '#f2f2f7',
-            200: '#e5e5ea',
-            300: '#d1d1d6',
-            400: '#a2a2a6',
-            500: '#8e8e93',
-            600: '#636366',
-            700: '#48484a',
-            800: '#2c2c2e',
-            850: '#1c1c1e',
-            900: '#121214',
-            950: '#0a0a0c',
+            50: '#f0f4f8',
+            100: '#e1e7f0',
+            200: '#c5d1e0',
+            300: '#a3b5cc',
+            400: '#7e96b8',
+            500: '#627b9c',
+            600: '#4c6482',
+            700: '#28446b', // Navy Border
+            800: '#1d3557', // Navy Active elements
+            850: '#132847', // Navy Hover state / borders
+            900: '#0f2038', // Navy Section panels
+            950: '#0a192f', // Deep Navy base background
           },
           green: {
             50: '#f0fdf4',

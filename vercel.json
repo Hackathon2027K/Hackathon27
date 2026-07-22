@@ -1,5 +1,8 @@
 {
-  "buildCommand": "pnpm build",
+  "version": 2,
+  "framework": "nextjs",
+  "buildCommand": "pnpm --filter frontend build",
   "installCommand": "pnpm install",
-  "framework": "nextjs"
+  "outputDirectory": "frontend/.next",
+  "devCommand": "pnpm --filter frontend dev"
 }

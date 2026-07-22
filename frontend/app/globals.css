@@ -5,8 +5,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     @apply bg-brand-grey-950 text-brand-grey-100 font-sans antialiased selection:bg-brand-green-500 selection:text-black;
+    overflow-x: hidden;
   }
 }
 

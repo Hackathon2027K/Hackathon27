@@ -298,14 +298,14 @@ export default function HomePage() {
                 </span>
               </div>
 
-              <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight text-white leading-none">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[0.9]">
                 HACKATHON <br />
                 <span className="bg-gradient-to-r from-brand-green-400 via-brand-orange-500 to-brand-orange-600 bg-clip-text text-transparent">
                   2027 EDITION
                 </span>
               </h1>
 
-              <p className="text-base sm:text-lg md:text-xl text-brand-grey-400 max-w-xl leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-brand-grey-400 max-w-xl leading-relaxed">
                 Connect with developers, AI specialists, and designers worldwide. Address critical IT challenges, deploy solutions in real-time, and compete for a prize pool exceeding $50,000.
               </p>
 
@@ -328,7 +328,7 @@ export default function HomePage() {
               </div>
 
               {/* Mini Stats Grid */}
-              <div className="grid grid-cols-3 gap-6 pt-10 border-t border-brand-grey-900 max-w-lg">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-10 border-t border-brand-grey-900 max-w-lg">
                 <div>
                   <span className="block text-2xl sm:text-3xl font-extrabold text-brand-green-400">$50K+</span>
                   <span className="text-xs text-brand-grey-400 uppercase tracking-wider font-semibold">Total Prize Pool</span>
@@ -347,7 +347,7 @@ export default function HomePage() {
             {/* Right Graphic/Preview Column */}
             <div className="lg:col-span-5 relative mt-8 lg:mt-0 flex justify-center">
               {/* Dynamic Abstract Tech Graphic */}
-              <div className="w-80 h-80 sm:w-96 sm:h-96 relative flex items-center justify-center">
+              <div className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 relative flex items-center justify-center">
                 {/* Rotating Border lines */}
                 <div className="absolute inset-0 rounded-full border-4 border-dashed border-brand-grey-850 animate-[spin_60s_linear_infinite]"></div>
                 <div className="absolute inset-6 rounded-full border border-brand-green-600/30 animate-[spin_30s_linear_infinite]"></div>
@@ -415,7 +415,7 @@ export default function HomePage() {
             </div>
 
             {/* Structured Value Cards */}
-            <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="lg:col-span-6 grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               
               <div className="glass-card p-6 rounded-xl flex flex-col justify-between">
                 <div>
@@ -507,7 +507,7 @@ export default function HomePage() {
                   <button
                     key={idx}
                     onClick={() => setActiveTrack(idx)}
-                    className={`p-5 rounded-xl border text-left flex items-start space-x-4 transition-all duration-300 ${
+                    className={`p-4 sm:p-5 rounded-xl border text-left flex items-start space-x-3 sm:space-x-4 transition-all duration-300 ${
                       isActive 
                         ? 'bg-brand-grey-850 border-brand-green-500/50 shadow-md shadow-brand-green-500/5' 
                         : 'bg-brand-grey-900/50 border-brand-grey-800/80 hover:bg-brand-grey-900 hover:border-brand-grey-700'
@@ -534,7 +534,7 @@ export default function HomePage() {
             </div>
 
             {/* Active Track Details Card (Right Column) */}
-            <div className="lg:col-span-7 glass border border-brand-grey-800 p-8 rounded-2xl relative min-h-[350px] flex flex-col justify-between">
+            <div className="lg:col-span-7 glass border border-brand-grey-800 p-5 sm:p-8 rounded-2xl relative min-h-[320px] sm:min-h-[350px] flex flex-col justify-between">
               <div>
                 <div className="flex items-center justify-between border-b border-brand-grey-800 pb-4 mb-6">
                   <div className="flex items-center space-x-3">
@@ -678,7 +678,7 @@ export default function HomePage() {
                 </p>
 
                 {/* Device controls */}
-                <div className="grid grid-cols-2 gap-3 pt-2">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                   <button 
                     onClick={() => setPhoneTab(phoneTab === 'home' ? 'tracks' : 'home')}
                     className="px-4 py-2.5 text-xs font-semibold rounded-lg bg-brand-grey-800 hover:bg-brand-grey-700 text-brand-grey-300 transition-all text-center flex items-center justify-center space-x-2 border border-brand-grey-700"
@@ -710,7 +710,7 @@ export default function HomePage() {
             <div className="lg:col-span-6 flex justify-center">
               
               {/* Phone Frame container */}
-              <div className="w-[310px] h-[610px] rounded-[48px] bg-brand-grey-850 p-3 shadow-2xl border-4 border-brand-grey-700 flex flex-col relative overflow-hidden box-glow-green">
+              <div className="w-full max-w-[310px] h-[560px] sm:h-[610px] rounded-[48px] bg-brand-grey-850 p-3 shadow-2xl border-4 border-brand-grey-700 flex flex-col relative overflow-hidden box-glow-green">
                 
                 {/* Speaker Grill / Ear piece */}
                 <div className="absolute top-5 left-1/2 -translate-x-1/2 w-32 h-6 bg-black rounded-full z-30 flex items-center justify-center">
@@ -995,7 +995,7 @@ export default function HomePage() {
               </h3>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-6 gap-4 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 items-center">
               {sponsors.map((sponsor, idx) => (
                 <div 
                   key={idx} 
@@ -1128,7 +1128,7 @@ export default function HomePage() {
       <footer className="mt-auto bg-brand-grey-950 border-t border-brand-grey-900 py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Branding */}
             <div className="flex flex-col space-y-3">
               <span className="font-extrabold text-lg text-white">HACKATHON <span className="text-brand-orange-500">27</span></span>

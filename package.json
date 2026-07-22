@@ -2,10 +2,23 @@
   "name": "hackathon27",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@9.15.0",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
   "scripts": {
+    "dev": "pnpm --filter frontend dev",
     "dev:frontend": "pnpm --filter frontend dev",
     "dev:backend": "pnpm --filter backend dev",
+    "build": "pnpm --filter frontend build",
     "build:frontend": "pnpm --filter frontend build",
+    "start": "pnpm --filter frontend start",
     "start:backend": "pnpm --filter backend start"
+  },
+  "dependencies": {
+    "next": "^14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   }
 }

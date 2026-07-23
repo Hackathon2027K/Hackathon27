@@ -81,16 +81,16 @@ export default function HomePage() {
   ];
 
   const schedule = [
-    { date: "Aug 01, 2026", title: "Registrations Open", desc: "Submit your team profiles and pick a track preference.", status: "completed" },
-    { date: "Sep 15, 2026", title: "Registrations Close", desc: "Submissions lock at 23:59 GMT.", status: "upcoming" },
-    { date: "Oct 10, 2026", title: "Opening Ceremony", desc: "Keynote, team matching session, and hacking kickoff.", status: "upcoming" },
-    { date: "Oct 12, 2026", title: "Hacking Ends & Pitching", desc: "Submit code repositories and 3-minute video pitches.", status: "upcoming" },
-    { date: "Oct 18, 2026", title: "Winners Announced", desc: "Award ceremony with international judges.", status: "upcoming" }
+    { date: "Aug 01, 2027", title: "Registrations Open", desc: "Submit your team profiles and pick a track preference.", status: "completed" },
+    { date: "Sep 15, 2027", title: "Registrations Close", desc: "Submissions lock at 23:59 GMT.", status: "upcoming" },
+    { date: "Oct 10, 2027", title: "Opening Ceremony", desc: "Keynote, team matching session, and hacking kickoff.", status: "upcoming" },
+    { date: "Oct 12, 2027", title: "Hacking Ends & Pitching", desc: "Submit code repositories and 3-minute video pitches.", status: "upcoming" },
+    { date: "Oct 18, 2027", title: "Winners Announced", desc: "Award ceremony with international judges.", status: "upcoming" }
   ];
 
   const faqs = [
     { q: "Who is eligible to participate?", a: "Students, developers, UI/UX designers, and tech enthusiasts worldwide. Teams of 2 to 4 members are eligible to register." },
-    { q: "Is there a registration fee?", a: "No, participation in Hackathon 27 is 100% free of charge, sponsored by our tech partners." },
+    { q: "Is there a registration fee?", a: "No, participation in Hackathon 2027 is 100% free of charge, sponsored by our tech partners." },
     { q: "Can we start coding before the event?", a: "No. All code and designs must be created during the official 48-hour hacking window. Pre-existing frameworks or templates are allowed if disclosed." },
     { q: "What should the final submission include?", a: "A working link to a GitHub repository, a deployed application demo URL, and a 3-minute presentation video following the recommended Pitch PPT guidelines." }
   ];
@@ -136,7 +136,7 @@ export default function HomePage() {
             
             {aboutDropdownOpen && (
               <div className="absolute top-full left-0 w-64 glass rounded-lg shadow-xl py-2 z-50 border border-brand-grey-700 animate-fadeIn mt-1">
-                <a href="#about" onClick={() => setAboutDropdownOpen(false)} className="block px-4 py-2 hover:bg-brand-grey-800 hover:text-brand-green-500 text-xs">About the Competition</a>
+                <a href="#about" onClick={() => setAboutDropdownOpen(false)} className="block px-4 py-2 hover:bg-brand-grey-800 hover:text-brand-green-500 text-xs">About the Hackathon</a>
                 <a href="#tracks" onClick={() => setAboutDropdownOpen(false)} className="block px-4 py-2 hover:bg-brand-grey-800 hover:text-brand-green-500 text-xs">Event Tracks</a>
                 <a href="#schedule" onClick={() => setAboutDropdownOpen(false)} className="block px-4 py-2 hover:bg-brand-grey-800 hover:text-brand-green-500 text-xs">Event Schedule</a>
                 <a href="#rules" onClick={() => setAboutDropdownOpen(false)} className="block px-4 py-2 hover:bg-brand-grey-800 hover:text-brand-green-500 text-xs">Participation Rules</a>
@@ -151,7 +151,7 @@ export default function HomePage() {
         ) : (
           <div className="flex flex-col pl-4 space-y-2 border-l border-brand-grey-800">
             <span className="text-brand-grey-500 text-xs uppercase font-bold tracking-wider mt-2">Information</span>
-            <a href="#about" onClick={onLinkClick} className="hover:text-brand-green-500 text-sm">About the Competition</a>
+            <a href="#about" onClick={onLinkClick} className="hover:text-brand-green-500 text-sm">About the Event</a>
             <a href="#tracks" onClick={onLinkClick} className="hover:text-brand-green-500 text-sm">Event Tracks</a>
             <a href="#schedule" onClick={onLinkClick} className="hover:text-brand-green-500 text-sm">Event Schedule</a>
             <a href="#rules" onClick={onLinkClick} className="hover:text-brand-green-500 text-sm">Participation Rules</a>
@@ -187,10 +187,10 @@ export default function HomePage() {
             </div>
             <div>
               <span className="font-extrabold text-xl tracking-tight text-white">
-                HACKATHON <span className="text-brand-orange-500">27</span>
+                HACKATHON <span className="text-brand-orange-500">2027</span>
               </span>
               <span className="block text-[9px] uppercase tracking-widest text-brand-green-500 font-bold -mt-1">
-                IT Competition
+                The Largest Hackathon Event in SINGAPORE
               </span>
             </div>
           </div>
@@ -294,14 +294,14 @@ export default function HomePage() {
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-green-500"></span>
                 </span>
                 <span className="text-xs font-semibold tracking-wider uppercase text-brand-grey-300">
-                  Global Hackathon Competition
+                  ASIA'S BIGGEST HACKATHON IN SINGAPORE
                 </span>
               </div>
 
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[0.9]">
                 HACKATHON <br />
                 <span className="bg-gradient-to-r from-brand-green-400 via-brand-orange-500 to-brand-orange-600 bg-clip-text text-transparent">
-                  2027 EDITION
+                  2027 SINGAPORE
                 </span>
               </h1>
 
@@ -394,16 +394,16 @@ export default function HomePage() {
                   01 // Overview
                 </span>
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
-                  About Hackathon 27
+                  About Hackathon 2027
                 </h2>
               </div>
               
               <p className="text-brand-grey-400 leading-relaxed">
-                Hackathon 27 is an international IT Competition designed to push the boundaries of digital solution building. Gathering developers, software engineers, UX designers, and system architects from multiple continents, this 48-hour event focuses on building prototype systems that solve concrete social, industrial, and ecological challenges.
+                Hackathon 2027 is the Largest Hackathon Event in SINGAPORE designed to push the boundaries of digital solution building. Gathering developers, software engineers, UX designers, and system architects from multiple continents, this 48-hour event focuses on building prototype systems that solve concrete social, industrial, and ecological challenges.
               </p>
               
               <p className="text-brand-grey-400 leading-relaxed">
-                Whether you are a university student testing your limits or a seasoned professional engineering high-performance systems, Hackathon 27 offers a collaborative, fast-paced environment where you can code, test, deploy, and showcase to a global audience.
+                Whether you are a university student testing your limits or a seasoned professional engineering high-performance systems, Hackathon 2027 offers a collaborative, fast-paced environment where you can code, test, deploy, and showcase to a global audience.
               </p>
 
               <div className="flex items-center space-x-3 bg-brand-grey-950 p-4 rounded-lg border border-brand-grey-800">
@@ -731,7 +731,7 @@ export default function HomePage() {
                   
                   {/* Phone Header */}
                   <div className="bg-brand-grey-900 border-b border-brand-grey-800 p-4 sticky top-0 flex justify-between items-center z-10">
-                    <span className="font-extrabold text-[11px] text-white">HACKATHON <span className="text-brand-orange-500">27</span></span>
+                    <span className="font-extrabold text-[11px] text-white">HACKATHON <span className="text-brand-orange-500">2027</span></span>
                     
                     {phoneIsSignedIn ? (
                       <span className="bg-brand-green-500/20 text-brand-green-400 px-2 py-0.5 rounded text-[9px] font-bold">
@@ -750,7 +750,7 @@ export default function HomePage() {
                       
                       {/* Hero inside phone */}
                       <div className="bg-gradient-to-br from-brand-grey-900 to-brand-grey-850 p-4 rounded-xl border border-brand-grey-800">
-                        <span className="text-[8px] font-bold text-brand-green-500 uppercase tracking-widest">IT Competition</span>
+                        <span className="text-[8px] font-bold text-brand-green-500 uppercase tracking-widest">The Largest Hackathon Event in SINGAPORE</span>
                         <h4 className="text-sm font-extrabold text-white mt-1">Hackathon 2027</h4>
                         <p className="text-[10px] text-brand-grey-400 mt-2 leading-relaxed">
                           Build the future of digital frameworks. 48 hours to code.
@@ -783,7 +783,7 @@ export default function HomePage() {
                     </div>
                   ) : (
                     <div className="p-4 flex flex-col space-y-3">
-                      <span className="text-[9px] uppercase font-bold tracking-wider text-brand-grey-400">Competition Tracks</span>
+                      <span className="text-[9px] uppercase font-bold tracking-wider text-brand-grey-400">Event Tracks</span>
                       
                       {tracks.map((track, idx) => {
                         const Icon = track.icon;
@@ -860,7 +860,7 @@ export default function HomePage() {
                   </div>
                   <div className="text-sm">
                     <span className="font-bold text-white block">Fresh Code ONLY</span>
-                    <span className="text-brand-grey-400">All application systems, scripts, structures, and designs must be authored during the active 48-hour competition phase. Pre-compiled code packages are disqualified.</span>
+                    <span className="text-brand-grey-400">All application systems, scripts, structures, and designs must be authored during the active 48-hour Event phase. Pre-compiled code packages are disqualified.</span>
                   </div>
                 </div>
 
@@ -941,7 +941,7 @@ export default function HomePage() {
             <div className="absolute top-0 right-0 w-64 h-64 rounded-full bg-brand-orange-500/5 blur-[80px] pointer-events-none"></div>
             
             <h2 className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
-              Register Your Team for Hackathon 27
+              Register Your Team for Hackathon 2027
             </h2>
             <p className="text-sm sm:text-base text-brand-grey-300 max-w-xl mx-auto mb-8 leading-relaxed">
               Lock in your technical track, outline your developer slots, and secure access to our sandbox clouds.
@@ -1082,11 +1082,11 @@ export default function HomePage() {
               <div className="flex flex-col space-y-4 pt-4">
                 <div className="flex items-center space-x-3 text-sm">
                   <Mail className="w-5 h-5 text-brand-orange-500" />
-                  <span className="text-brand-grey-300">support@hackathon27.org</span>
+                  <span className="text-brand-grey-300">support@hackathon2027.com</span>
                 </div>
                 <div className="flex items-center space-x-3 text-sm">
                   <Globe className="w-5 h-5 text-brand-green-500" />
-                  <span className="text-brand-grey-300">www.hackathon27.org</span>
+                  <span className="text-brand-grey-300">www.hackathon2027.com</span>
                 </div>
               </div>
             </div>
@@ -1131,9 +1131,9 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
             {/* Branding */}
             <div className="flex flex-col space-y-3">
-              <span className="font-extrabold text-lg text-white">HACKATHON <span className="text-brand-orange-500">27</span></span>
+              <span className="font-extrabold text-lg text-white">HACKATHON <span className="text-brand-orange-500">2027</span></span>
               <p className="text-xs text-brand-grey-500 leading-relaxed">
-                The international IT Competition bridging engineering communities to solve real-world problems.
+                The international IT Event bridging engineering communities to solve real-world problems.
               </p>
             </div>
 
@@ -1162,7 +1162,7 @@ export default function HomePage() {
             <div className="flex flex-col space-y-3">
               <h4 className="text-xs font-bold text-brand-grey-300 uppercase tracking-widest">Repository</h4>
               <p className="text-[11px] text-brand-grey-500">
-                Stored in github.com/hackathon27
+                Stored in github.com/hackathon2027
               </p>
               <a 
                 href="https://github.com" 
@@ -1177,7 +1177,7 @@ export default function HomePage() {
           </div>
 
           <div className="border-t border-brand-grey-900 pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-brand-grey-500 gap-4">
-            <span>© 2026 Hackathon 27 IT Competition. All rights reserved.</span>
+            <span>© 2027 Hackathon 2027 IT Event. All rights reserved.</span>
             <div className="flex space-x-4">
               <a href="#terms" onClick={(e) => { e.preventDefault(); alert("Mock Terms & Conditions"); }} className="hover:text-brand-grey-300">Terms of Service</a>
               <a href="#privacy" onClick={(e) => { e.preventDefault(); alert("Mock Privacy Policy"); }} className="hover:text-brand-grey-300">Privacy Policy</a>

@@ -278,7 +278,7 @@ export default function HomePage() {
       </header>
 
       {/* 2. HERO SECTION */}
-      <section className="relative overflow-hidden pt-12 pb-24 md:py-32 border-b border-brand-grey-850">
+      <section className="relative overflow-hidden pt-12 pb-24 md:py-32 border-b border-brand-grey-850 bg-gradient-to-r from-brand-green-900/20 via-brand-grey-950 to-brand-orange-900/10">
         {/* Glow Spheres */}
         <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-brand-green-700/10 blur-[120px] pointer-events-none"></div>
         <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 rounded-full bg-brand-orange-700/10 blur-[120px] pointer-events-none"></div>
@@ -309,6 +309,7 @@ export default function HomePage() {
                 Connect with developers, AI specialists, and designers worldwide. Address critical IT challenges, deploy solutions in real-time, and compete for a prize pool exceeding $50,000.
               </p>
 
+              
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
                 <a 
                   href="#register"
@@ -344,7 +345,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right Graphic/Preview Column */}
+            {/* Right Graphic/Preview Column (Banner Visual) */}
             <div className="lg:col-span-5 relative mt-8 lg:mt-0 flex justify-center">
               {/* Dynamic Abstract Tech Graphic */}
               <div className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 relative flex items-center justify-center">

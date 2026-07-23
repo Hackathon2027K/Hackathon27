@@ -176,6 +176,7 @@ export default function HomePage() {
 
   return (
     <div id="home" className="min-h-screen bg-brand-grey-950 text-brand-grey-100 flex flex-col selection:bg-brand-green-500 selection:text-black">
+      <style>{`\n        @keyframes slide-left {\n          0% { transform: translateX(40px); opacity: 0; }\n          100% { transform: translateX(0); opacity: 1; }\n        }\n      `}</style>
       
       {/* 1. STICKY HEADER */}
       <header className="sticky top-0 w-full z-40 glass-nav transition-all duration-300">
@@ -365,27 +366,27 @@ export default function HomePage() {
                 </div>
 
                 {/* Satellite Badges */}
-                <div className="absolute top-2 left-10 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-green-500/30 animate-bounce">
+                <div className="absolute top-2 left-10 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-green-500/30" style={{ animation: 'slide-left 0.8s cubic-bezier(.22,.9,.26,1) forwards', animationDelay: '0.20s' }}>
                   <Trophy className="w-3.5 h-3.5 text-brand-green-400" />
                   <span className="text-[10px] font-bold text-white uppercase tracking-wider">$15K Grand Prize</span>
                 </div>
 
-                <div className="absolute bottom-6 right-2 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-orange-500/30">
+                <div className="absolute bottom-6 right-2 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-orange-500/30" style={{ animation: 'slide-left 0.9s cubic-bezier(.22,.9,.26,1) forwards', animationDelay: '0.35s' }}>
                   <Users className="w-3.5 h-3.5 text-brand-orange-500" />
                   <span className="text-[10px] font-bold text-white uppercase tracking-wider">Expert Mentorship</span>
                 </div>
 
-                <div className="absolute top-1/2 -right-4 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-grey-500/30">
+                <div className="absolute top-1/2 -right-4 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-grey-500/30" style={{ animation: 'slide-left 0.95s cubic-bezier(.22,.9,.26,1) forwards', animationDelay: '0.50s' }}>
                   <Shield className="w-3.5 h-3.5 text-brand-grey-400" />
                   <span className="text-[10px] font-bold text-white uppercase tracking-wider">Strict Security</span>
                 </div>
                 
-                <div className="absolute -top-4 right-12 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-green-500/30">
+                <div className="absolute -top-4 right-12 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-green-500/30" style={{ animation: 'slide-left 1s cubic-bezier(.22,.9,.26,1) forwards', animationDelay: '0.65s' }}>
                   <Award className="w-3.5 h-3.5 text-brand-orange-400" />
                   <span className="text-[10px] font-bold text-white uppercase tracking-wider">International Judges</span>
                 </div>
 
-                <div className="absolute bottom-2 left-8 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-grey-500/30">
+                <div className="absolute bottom-2 left-8 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-grey-500/30" style={{ animation: 'slide-left 1.05s cubic-bezier(.22,.9,.26,1) forwards', animationDelay: '0.80s' }}>
                   <Phone className="w-3.5 h-3.5 text-brand-green-400" />
                   <span className="text-[10px] font-bold text-white uppercase tracking-wider">24/7 Hack Support</span>
                 </div>

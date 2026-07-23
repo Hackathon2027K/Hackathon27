@@ -189,8 +189,8 @@ export default function HomePage() {
               <span className="font-extrabold text-xl tracking-tight text-white">
                 HACKATHON <span className="text-brand-orange-500">2027</span>
               </span>
-              <span className="block text-[9px] uppercase tracking-widest text-brand-green-500 font-bold -mt-1">
-                The Largest Hackathon Event in SINGAPORE
+              <span className="block text-[9px] tracking-widest text-brand-green-500 font-bold -mt-1">
+                The Largest Hackathon Event in Singapore
               </span>
             </div>
           </div>
@@ -750,7 +750,7 @@ export default function HomePage() {
                       
                       {/* Hero inside phone */}
                       <div className="bg-gradient-to-br from-brand-grey-900 to-brand-grey-850 p-4 rounded-xl border border-brand-grey-800">
-                        <span className="text-[8px] font-bold text-brand-green-500 uppercase tracking-widest">The Largest Hackathon Event in SINGAPORE</span>
+                        <span className="text-[8px] font-bold text-brand-green-500 tracking-widest">The Largest Hackathon Event in Singapore</span>
                         <h4 className="text-sm font-extrabold text-white mt-1">Hackathon 2027</h4>
                         <p className="text-[10px] text-brand-grey-400 mt-2 leading-relaxed">
                           Build the future of digital frameworks. 48 hours to code.

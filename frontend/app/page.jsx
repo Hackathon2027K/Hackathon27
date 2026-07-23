@@ -376,6 +376,16 @@ export default function HomePage() {
                   <Shield className="w-3.5 h-3.5 text-brand-grey-400" />
                   <span className="text-[10px] font-bold text-white uppercase tracking-wider">Strict Security</span>
                 </div>
+                
+                <div className="absolute -top-4 right-12 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-green-500/30">
+                  <Award className="w-3.5 h-3.5 text-brand-orange-400" />
+                  <span className="text-[10px] font-bold text-white uppercase tracking-wider">International Judges</span>
+                </div>
+
+                <div className="absolute bottom-2 left-8 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-grey-500/30">
+                  <Phone className="w-3.5 h-3.5 text-brand-green-400" />
+                  <span className="text-[10px] font-bold text-white uppercase tracking-wider">24/7 Hack Support</span>
+                </div>
               </div>
             </div>
 

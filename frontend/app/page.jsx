@@ -278,12 +278,15 @@ export default function HomePage() {
       </header>
 
       {/* 2. HERO SECTION */}
-      <section className="relative overflow-hidden pt-12 pb-24 md:py-32 border-b border-brand-grey-850 bg-gradient-to-r from-brand-green-900/20 via-brand-grey-950 to-brand-orange-900/10">
+      <section className="relative overflow-hidden pt-12 pb-24 md:py-32 border-b border-brand-grey-850">
         {/* Glow Spheres */}
         <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-brand-green-700/10 blur-[120px] pointer-events-none"></div>
         <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 rounded-full bg-brand-orange-700/10 blur-[120px] pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Strong, full-bleed banner background placed behind content */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-brand-green-700/30 via-brand-grey-900/50 to-brand-orange-600/30 pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
             {/* Left Content Column */}

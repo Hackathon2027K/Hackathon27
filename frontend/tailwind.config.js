@@ -32,6 +32,7 @@ module.exports = {
             600: '#059669',
             700: '#047857',
             glow: '#00f5a0',
+            new: '#10b981',
           },
           orange: {
             50: '#fff7ed',

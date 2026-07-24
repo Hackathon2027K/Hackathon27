@@ -335,7 +335,7 @@ export default function HomePage() {
                           <span className="inline-flex rounded-full bg-brand-grey-900/80 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-brand-orange-500 font-bold mb-5">
                             Asia's Biggest Hackathon
                           </span>
-                          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-orange-400 tracking-tight max-w-2xl">
+                          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-2xl bg-gradient-to-r from-brand-green-400 via-brand-orange-500 to-yellow-300 bg-clip-text text-transparent">
                             {banner.title}
                           </h2>
                           <p className="mt-5 text-sm sm:text-base text-brand-grey-300 max-w-2xl leading-relaxed">

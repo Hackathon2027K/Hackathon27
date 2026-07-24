@@ -38,6 +38,7 @@ export default function HomePage() {
   // Interactive Showcase States
   const [activeTrack, setActiveTrack] = useState(0);
   const [activeFAQ, setActiveFAQ] = useState(null);
+  const [activeBanner, setActiveBanner] = useState(0);
   
   // Simulated Phone Screen state
   const [phoneTab, setPhoneTab] = useState('home');
@@ -47,6 +48,14 @@ export default function HomePage() {
   useEffect(() => {
     setPhoneIsSignedIn(isSignedIn);
   }, [isSignedIn]);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveBanner((prev) => (prev + 1) % heroBanners.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   // Data Definitions
   const tracks = [
@@ -108,6 +117,27 @@ export default function HomePage() {
     { name: "Postman", level: "Gold", size: "col-span-1" },
     { name: "Twilio", level: "Silver", size: "col-span-1" },
     { name: "Okta", level: "Silver", size: "col-span-1" }
+  ];
+
+  const heroBanners = [
+    {
+      title: "HACKATHON 2027 SINGAPORE",
+      subtitle: "Asia's biggest hackathon returns with hybrid innovation, live challenges, and global mentorship.",
+      details: ["$50K+ Prize Pool", "48-hour competition", "100+ global teams"],
+      accent: "from-brand-green-400 to-brand-orange-500"
+    },
+    {
+      title: "Expert Mentorship",
+      subtitle: "Top engineers and judges guide teams through every fast-paced sprint.",
+      details: ["Live mentor office hours", "Pitch coaching sessions", "Hands-on review feedback"],
+      accent: "from-brand-orange-500 to-brand-yellow-400"
+    },
+    {
+      title: "International Judging Panel",
+      subtitle: "Global IT leaders evaluate ideas, execution, and real-world impact.",
+      details: ["Multi-stage judging", "Innovation-focused awards", "Global exposure"],
+      accent: "from-brand-green-500 to-brand-green-300"
+    }
   ];
 
   // Helper component for navigation links
@@ -176,6 +206,7 @@ export default function HomePage() {
 
   return (
     <div id="home" className="min-h-screen bg-brand-grey-950 text-brand-grey-100 flex flex-col selection:bg-brand-green-500 selection:text-black">
+      <style>{`\n        @keyframes slide-left {\n          0% { transform: translateX(40px); opacity: 0; }\n          100% { transform: translateX(0); opacity: 1; }\n        }\n      `}</style>
       
       {/* 1. STICKY HEADER */}
       <header className="sticky top-0 w-full z-40 glass-nav transition-all duration-300">
@@ -186,7 +217,7 @@ export default function HomePage() {
               H
             </div>
             <div>
-              <span className="font-extrabold text-xl tracking-tight text-white">
+              <span className="font-extrabold text-xl tracking-tight text-green-new">
                 HACKATHON <span className="text-brand-orange-500">2027</span>
               </span>
               <span className="block text-[9px] tracking-widest text-brand-green-500 font-bold -mt-1">
@@ -283,68 +314,61 @@ export default function HomePage() {
         <div className="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full bg-brand-green-700/10 blur-[120px] pointer-events-none"></div>
         <div className="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 w-96 h-96 rounded-full bg-brand-orange-700/10 blur-[120px] pointer-events-none"></div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        {/* Strong, full-bleed banner background placed behind content */}
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-brand-green-700/30 via-brand-grey-900/50 to-brand-orange-600/30 pointer-events-none"></div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             
-            {/* Left Content Column */}
-            <div className="lg:col-span-7 flex flex-col space-y-6 text-left">
-              <div className="inline-flex items-center space-x-2 bg-brand-grey-900 border border-brand-grey-800 rounded-full px-3 py-1 w-fit">
-                <span className="flex h-2 w-2 relative">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-green-500"></span>
-                </span>
-                <span className="text-xs font-semibold tracking-wider uppercase text-brand-grey-300">
-                  ASIA'S BIGGEST HACKATHON IN SINGAPORE
-                </span>
-              </div>
+            {/* Slider Column */}
+            <div className="lg:col-span-7">
+              <div className="relative overflow-hidden rounded-[2rem] border border-brand-grey-800 bg-brand-grey-950 shadow-2xl p-6 sm:p-8">
+                <div className="absolute inset-0 bg-gradient-to-r from-brand-green-700/40 via-brand-grey-900/70 to-brand-orange-600/30 pointer-events-none"></div>
+                <div className="relative z-10 h-full overflow-hidden">
+                  <div
+                    className="flex transition-transform duration-700 ease-out"
+                    style={{ transform: `translateX(-${activeBanner * 100}%)` }}
+                  >
+                    {heroBanners.map((banner) => (
+                      <div key={banner.title} className="min-w-full flex flex-col justify-between gap-8 p-6 sm:p-8">
+                        <div>
+                          <span className="inline-flex rounded-full bg-brand-grey-900/80 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-brand-orange-500 font-bold mb-5">
+                            Asia's Biggest Hackathon
+                          </span>
+                          <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight max-w-2xl bg-gradient-to-r from-brand-green-400 via-brand-orange-500 to-yellow-300 bg-clip-text text-transparent">
+                            {banner.title}
+                          </h2>
+                          <p className="mt-5 text-sm sm:text-base text-brand-grey-300 max-w-2xl leading-relaxed">
+                            {banner.subtitle}
+                          </p>
+                        </div>
 
-              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[0.9]">
-                HACKATHON <br />
-                <span className="bg-gradient-to-r from-brand-green-400 via-brand-orange-500 to-brand-orange-600 bg-clip-text text-transparent">
-                  2027 SINGAPORE
-                </span>
-              </h1>
-
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl text-brand-grey-400 max-w-xl leading-relaxed">
-                Connect with developers, AI specialists, and designers worldwide. Address critical IT challenges, deploy solutions in real-time, and compete for a prize pool exceeding $50,000.
-              </p>
-
-              <div className="flex flex-col sm:flex-row items-stretch sm:items-center space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
-                <a 
-                  href="#register"
-                  onClick={(e) => { e.preventDefault(); document.getElementById('register')?.scrollIntoView({ behavior: 'smooth' }); }}
-                  className="px-8 py-4 rounded-lg bg-gradient-to-r from-brand-orange-500 to-brand-orange-600 hover:from-brand-orange-400 hover:to-brand-orange-500 text-black font-bold text-center shadow-lg hover:shadow-brand-orange-500/20 transform hover:-translate-y-0.5 transition-all duration-300"
-                >
-                  Register My Team
-                </a>
-                <a 
-                  href="#about"
-                  onClick={(e) => { e.preventDefault(); document.getElementById('about')?.scrollIntoView({ behavior: 'smooth' }); }}
-                  className="px-8 py-4 rounded-lg bg-brand-grey-900 border border-brand-grey-800 hover:border-brand-grey-600 text-brand-grey-300 font-bold text-center transition-all duration-300 flex items-center justify-center space-x-2"
-                >
-                  <span>Learn More</span>
-                  <Info className="w-4 h-4" />
-                </a>
-              </div>
-
-              {/* Mini Stats Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 pt-10 border-t border-brand-grey-900 max-w-lg">
-                <div>
-                  <span className="block text-2xl sm:text-3xl font-extrabold text-brand-green-400">$50K+</span>
-                  <span className="text-xs text-brand-grey-400 uppercase tracking-wider font-semibold">Total Prize Pool</span>
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-6">
+                          {banner.details.map((detail) => (
+                            <div key={detail} className="rounded-3xl bg-brand-grey-900/80 border border-brand-grey-800 px-4 py-4 text-sm text-brand-grey-200">
+                              {detail}
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
                 </div>
-                <div>
-                  <span className="block text-2xl sm:text-3xl font-extrabold text-brand-orange-500">48 hrs</span>
-                  <span className="text-xs text-brand-grey-400 uppercase tracking-wider font-semibold">Intense Coding</span>
-                </div>
-                <div>
-                  <span className="block text-2xl sm:text-3xl font-extrabold text-brand-grey-300">100+</span>
-                  <span className="text-xs text-brand-grey-400 uppercase tracking-wider font-semibold">Global Teams</span>
+
+                <div className="absolute bottom-6 left-1/2 z-20 flex -translate-x-1/2 gap-3">
+                  {heroBanners.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setActiveBanner(index)}
+                      className={`h-2 w-10 rounded-full transition-all ${activeBanner === index ? 'bg-brand-orange-500' : 'bg-brand-grey-800'}`}
+                      aria-label={`Show banner ${index + 1}`}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
 
-            {/* Right Graphic/Preview Column */}
+            {/* Right Graphic/Preview Column (Banner Visual) */}
             <div className="lg:col-span-5 relative mt-8 lg:mt-0 flex justify-center">
               {/* Dynamic Abstract Tech Graphic */}
               <div className="w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 relative flex items-center justify-center">
@@ -361,19 +385,29 @@ export default function HomePage() {
                 </div>
 
                 {/* Satellite Badges */}
-                <div className="absolute top-2 left-10 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-green-500/30 animate-bounce">
+                <div className="absolute top-2 left-10 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-green-500/30" style={{ animation: 'slide-left 0.8s cubic-bezier(.22,.9,.26,1) forwards', animationDelay: '0.20s' }}>
                   <Trophy className="w-3.5 h-3.5 text-brand-green-400" />
                   <span className="text-[10px] font-bold text-white uppercase tracking-wider">$15K Grand Prize</span>
                 </div>
 
-                <div className="absolute bottom-6 right-2 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-orange-500/30">
+                <div className="absolute bottom-6 right-2 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-orange-500/30" style={{ animation: 'slide-left 0.9s cubic-bezier(.22,.9,.26,1) forwards', animationDelay: '0.35s' }}>
                   <Users className="w-3.5 h-3.5 text-brand-orange-500" />
                   <span className="text-[10px] font-bold text-white uppercase tracking-wider">Expert Mentorship</span>
                 </div>
 
-                <div className="absolute top-1/2 -right-4 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-grey-500/30">
+                <div className="absolute top-1/2 -right-4 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-grey-500/30" style={{ animation: 'slide-left 0.95s cubic-bezier(.22,.9,.26,1) forwards', animationDelay: '0.50s' }}>
                   <Shield className="w-3.5 h-3.5 text-brand-grey-400" />
                   <span className="text-[10px] font-bold text-white uppercase tracking-wider">Strict Security</span>
+                </div>
+                
+                <div className="absolute -top-4 right-12 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-green-500/30" style={{ animation: 'slide-left 1s cubic-bezier(.22,.9,.26,1) forwards', animationDelay: '0.65s' }}>
+                  <Award className="w-3.5 h-3.5 text-brand-orange-400" />
+                  <span className="text-[10px] font-bold text-white uppercase tracking-wider">International Judges</span>
+                </div>
+
+                <div className="absolute bottom-2 left-8 glass px-3 py-1.5 rounded-full flex items-center space-x-1.5 border border-brand-grey-500/30" style={{ animation: 'slide-left 1.05s cubic-bezier(.22,.9,.26,1) forwards', animationDelay: '0.80s' }}>
+                  <Phone className="w-3.5 h-3.5 text-brand-green-400" />
+                  <span className="text-[10px] font-bold text-white uppercase tracking-wider">24/7 Hack Support</span>
                 </div>
               </div>
             </div>

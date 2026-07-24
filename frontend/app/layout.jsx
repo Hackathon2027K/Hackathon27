@@ -1,7 +1,7 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Hackathon 27 - International IT Competition',
+  title: 'Hackathon 2027 - The Largest Hackathon Event in Singapore',
   description: 'Join Hackathon 27, the ultimate global arena for developers, designers, and innovators to build cutting-edge IT solutions. Showcase your skills, win prizes, and collaborate.',
 };
 

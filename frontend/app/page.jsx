@@ -217,7 +217,7 @@ export default function HomePage() {
               H
             </div>
             <div>
-              <span className="font-extrabold text-xl tracking-tight text-white">
+              <span className="font-extrabold text-xl tracking-tight text-green-new">
                 HACKATHON <span className="text-brand-orange-500">2027</span>
               </span>
               <span className="block text-[9px] tracking-widest text-brand-green-500 font-bold -mt-1">

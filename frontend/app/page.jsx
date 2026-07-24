@@ -332,10 +332,10 @@ export default function HomePage() {
                     {heroBanners.map((banner) => (
                       <div key={banner.title} className="min-w-full flex flex-col justify-between gap-8 p-6 sm:p-8">
                         <div>
-                          <span className="inline-flex rounded-full bg-brand-grey-900/80 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-brand-grey-300 font-bold mb-5">
-                            Featured Banner
+                          <span className="inline-flex rounded-full bg-brand-grey-900/80 px-3 py-1 text-[10px] uppercase tracking-[0.35em] text-brand-orange-500 font-bold mb-5">
+                            Asia's Biggest Hackathon
                           </span>
-                          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight max-w-2xl">
+                          <h2 className="text-3xl sm:text-4xl font-extrabold text-brand-orange-400 tracking-tight max-w-2xl">
                             {banner.title}
                           </h2>
                           <p className="mt-5 text-sm sm:text-base text-brand-grey-300 max-w-2xl leading-relaxed">
